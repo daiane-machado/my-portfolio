@@ -6,30 +6,34 @@
   padding: 0 1.5rem;
 }
 
-.menuBar {
+.menuNav {
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  :nth-child(1) {
+  align-items: center;
+
+  .itemMenu {
     margin-right: 1rem;
-  }
-  :nth-child(3) {
-    margin-left: 1rem;
   }
 
   .menu {
     font-size: 1em;
     font-weight: 600;
     display: flex;
-    align-items: center;
+    //align-items: center;
     position: relative;
   }
-  .menu::before {
+
+  .menu:hover {
+    color: var(--color-additional);
+  }
+ /*  .menu::before {
     content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 2px;
+    top: 26px;
     bottom: 0;
     left: 0;
     transform: scaleX(0);
@@ -37,8 +41,12 @@
   }
   .menu:hover::before {
     transform: scaleX(1);
-  }
+    color: var(--color-gray-100)
+  } */
 
+  li {
+    list-style: none;
+  }
 
   .iconTheme {
     padding: 0.5rem;
@@ -47,7 +55,71 @@
     height: 30px;
     padding: 0.2rem;
   }
+  .iconTheme:hover {
+    background-color: (var(--color-additional));
+  }
+  
+  
 }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: var(--color-base-300);
+  }
+
+
+ @media(max-width:1024px){
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menuNav{
+    position: fixed;
+    top: -100%;
+    gap:0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+    align-items: center;
+    border-bottom: solid 1px var(--color-base-200);
+  }
+
+  .itemMenu {
+    margin: 0.5rem 0;
+  }
+
+  .menuNav.active{
+    left: 0;
+    top: 70px;
+  }
+
+  .itemMenu {
+    padding: 0.5rem 0;
+  }
+  
+
+
+ }
 
 
 .dark {
@@ -58,10 +130,9 @@
     background-color: var(--color-base-300);
   }
 
-  .iconTheme:hover {
-    background-color: (var(--color-gray-100));
+  .menuNav {
+    background-color: var(--color-background-light);
   }
-
 }
 
 .light {
@@ -72,7 +143,7 @@
     background-color: var(--color-base-100);
   }
 
-  .iconTheme:hover {
-    background-color: (var(--color-gray-200));
+  .menuNav {
+    background-color: var(--color-background-dark);
   }
 }

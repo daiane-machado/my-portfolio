@@ -3,30 +3,42 @@ import Link from "next/link"
 import styles from "./styles.module.scss"
 import Image from "next/image"
 import { useGlobalContext } from "@/provider"
+import { useEffect, useState } from "react"
 
 export default function Navbar() {
 
   const { setCheckTheme, checkTheme, theme } = useGlobalContext()
+  const [active, setActive] = useState("")
+  const [checkActive, setCheckActive] = useState(false)
 
+  useEffect(()=> {
+    checkActive ? setActive("active") : setActive("")
+  }, [checkActive])
 
-  //console.log(theme)
+  console.log(active)
 
   return (
     <div id="navbar" className={`${styles.wrapper} ${styles[theme]}`}>
       <Link href="/curriculo" className={styles.textMenu} >
         {
           theme === "light"
-          ? <Image src="/My_logo-light.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
-          : <Image src="/My_logo.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
+            ? <Image src="/My_logo-light.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
+            : <Image src="/My_logo.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
         }
       </Link>
-      <div className={styles.menuBar}>
-        <Link href="/curriculo" className={`${styles.menu}`} >
-          Currículo
-        </Link>
+      <ul className={`${styles.menuNav} ${styles[active]}`}>
+        
+        <li className={styles.itemMenu}>
+          <Link href="/curriculo" className={`${styles.menu}`} >
+            Currículo
+          </Link>
+        </li>
+        <li className={styles.itemMenu}>
         <Link href="/" className={styles.menu}>
           Projetos
         </Link>
+        </li>
+        
         <button
           type="button"
           className={styles.btTheme}
@@ -36,6 +48,11 @@ export default function Navbar() {
             : <Image src="/icon-light.svg" width={23} height={23} alt="sun" className={styles.iconTheme} />
           }
         </button>
+      </ul>
+      <div className={`${styles.hamburger} ${styles[active]}`} onClick={()=>{setCheckActive(!checkActive)}}>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
       </div>
     </div>
   )

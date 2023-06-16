@@ -1,3 +1,8 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   display: flex;
   padding: 0 13rem;
@@ -44,8 +49,6 @@
     top: 7rem;
     font-weight: 400;
 
-
-
     :nth-child(1){
       font-size: 2.5rem;
     }
@@ -59,11 +62,10 @@
 
 }
 
-@media (max-width: 678px){
+@media (max-width: 768px){
   .main {
     padding: 1rem;
     flex-wrap: wrap;
-    align-items:flex-start;
   }
 
   .images, .apresentation {

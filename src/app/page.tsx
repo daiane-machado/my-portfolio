@@ -2,17 +2,19 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
 import { useGlobalContext } from '@/provider'
+import Navbar from '@/component/navbar'
 
 export default function Home() {
 
   const { theme } = useGlobalContext()
 
   return (
+    <div className={styles.wrapper}>
+    <header>
+      <Navbar />
+    </header>
     <main className={`${styles.main} ${styles[theme]}`}>
       <div className={styles.images}>
-
-
-
         <Image
           src={"/my-photo.jpg"}
           width="0"
@@ -22,16 +24,14 @@ export default function Home() {
           alt='mulher negra sorrindo'
           className={styles.profile}
         />
-
         <Image src={"/graphics-main.svg"}
           width="0"
           height="0"
           style={{ width: '24rem', height: 'auto' }}
           alt="graphics"
           className={styles.graphics} />
-
-
       </div>
+
       <div className={styles.apresentation}>
         <div className={styles.text}>
           <p>Olá,
@@ -46,6 +46,7 @@ export default function Home() {
       </div>
 
     </main>
+    </div>
   )
 }
 
