@@ -1,4 +1,47 @@
 .wrapper {
-  height: 4.25rem;
+  height: 3.75rem;
   background-color: var(--color-base-200);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  //margin: auto;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+
 }
+
+.social {
+  display: flex;
+  align-items: center;
+
+  :nth-child(1){
+    margin-right: 0.5rem;
+  }
+  
+  .icon {
+    cursor: pointer;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+
+
+.email{
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+  color: var(--color-base-100);
+}
+

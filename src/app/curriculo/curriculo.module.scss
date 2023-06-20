@@ -1,0 +1,91 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2.5rem 4.5rem 2.5rem;
+  position: relative;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 1.7rem;
+  font-weight: 300;
+  align-self: flex-start;
+}
+.curriculum, .head {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0 0 0 ;
+}
+
+.curriculum{
+  flex-direction: column;
+  width: 70%;
+}
+
+.col1, .col2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.line {
+  display: block;
+  height: 250px;
+  margin-top: 1.5rem;
+  width: 1px;
+}
+
+.timeLine {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 0 1px;
+  list-style: none;
+}
+
+
+.wrapperContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.light{
+ 
+  background-color: var(--color-background-dark);;
+  
+  
+    color: var(--color-base-100);
+
+}
+.dark{
+ 
+    background-color: var(--color-background-light);
+ 
+    color: var(--color-base-300);
+ 
+}
+
+@media(max-width:968px){
+  .curriculum {
+    width: 100%;
+  }
+}

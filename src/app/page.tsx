@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
     <header>
+      <title>Home</title>
       <Navbar />
     </header>
     <main className={`${styles.main} ${styles[theme]}`}>

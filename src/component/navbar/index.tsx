@@ -10,16 +10,35 @@ export default function Navbar() {
   const { setCheckTheme, checkTheme, theme } = useGlobalContext()
   const [active, setActive] = useState("")
   const [checkActive, setCheckActive] = useState(false)
+  const [positionScroll, setPositionScroll] = useState()
 
-  useEffect(()=> {
+  
+
+  useEffect(() => {
     checkActive ? setActive("active") : setActive("")
-  }, [checkActive])
+    
+    
+  }, [checkActive, positionScroll])
+
+  window.addEventListener('scroll', function (e: any) {
+    //if (e.scrollY === lastScrollTop) return;
+
+    if ((active === "active") && (positionScroll !== this.scroll)) {
+
+      setCheckActive(!checkActive)
+    } 
+
+  }, true)
+
+
+
+
 
   console.log(active)
 
   return (
-    <div id="navbar" className={`${styles.wrapper} ${styles[theme]}`}>
-      <Link href="/curriculo" className={styles.textMenu} >
+    <div className={`${styles.wrapper} ${styles[theme]}`}>
+      <Link href="/" >
         {
           theme === "light"
             ? <Image src="/My_logo-light.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
@@ -27,18 +46,17 @@ export default function Navbar() {
         }
       </Link>
       <ul className={`${styles.menuNav} ${styles[active]}`}>
-        
         <li className={styles.itemMenu}>
           <Link href="/curriculo" className={`${styles.menu}`} >
             Currículo
           </Link>
         </li>
         <li className={styles.itemMenu}>
-        <Link href="/" className={styles.menu}>
-          Projetos
-        </Link>
+          <Link href="/" className={styles.menu}>
+            Projetos
+          </Link>
         </li>
-        
+
         <button
           type="button"
           className={styles.btTheme}
@@ -49,7 +67,7 @@ export default function Navbar() {
           }
         </button>
       </ul>
-      <div className={`${styles.hamburger} ${styles[active]}`} onClick={()=>{setCheckActive(!checkActive)}}>
+      <div className={`${styles.hamburger} ${styles[active]}`} onClick={() => { setCheckActive(!checkActive) }}>
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
