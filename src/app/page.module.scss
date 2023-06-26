@@ -7,28 +7,16 @@
   display: flex;
   padding: 0 13rem;
   justify-content:center;
-  min-height: calc(100vh - 8.50rem);
+  min-height: calc(100vh - 3.75rem);
   position: relative;
   align-items: center;
 }
 
-
-
-.images {
-  background-image: url("/public/graphics-main.svg");
-  display: flex;
-  position: relative;
-  width: 50%;
-
-}
-
-
-
 .profile {
   border-radius: 50%;
   position: absolute;
-  top: 4.5rem;
-  left: 3.5rem;
+  top: 10rem;
+  left: 19rem;
   padding: 0.2rem;
   background-color: #fff;
   border: solid 3px var(--color-base-200);
@@ -44,10 +32,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  left: -3rem;
 
   .text {
     top: 7rem;
     font-weight: 400;
+
 
     :nth-child(1){
       font-size: 2.5rem;
@@ -57,6 +47,7 @@
       font-size: 1rem;
       line-height: 1.3em;
       text-align: justify;
+      left: -5px;
     }
   }
 
@@ -70,6 +61,11 @@
 
   .images, .apresentation {
     width: 100%;
+  }
+
+  .profile {
+    top: 6.5rem;
+    left: 4.5rem;
   }
 }
 

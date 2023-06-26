@@ -1,10 +1,22 @@
-export const curriculum =
+interface ICurriculum {
+  dateI: string,
+  dateF: string,
+  institution?: string,
+  course?: string,
+  company?: string,
+  office?: string,
+  desc?: string,
+}
+
+
+export const curriculum : Array<ICurriculum> =
   [
     {
       dateI: "2021-03-01 00:00:00",
       dateF: "2022-06-01 00:00:00",
       institution: "UFSC",
       course: "Design"
+
     },
     {
       dateI: "2014-12-01 00:00:00",

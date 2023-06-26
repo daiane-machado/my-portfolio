@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.emblem {
+  margin: 0.5rem;
+}
+.img {
+  padding: 0.5rem;
+  background-color: var(--color-base-250);
+  border-radius: 8px;
+}
+
+.light {
+  background-color: var(--color-background-dark);
+  color: var(--color-base-100);
+}
+
+.dark {
+  background-color: var(--color-background-light);
+  color: var(--color-base-300);
+}

@@ -1,6 +1,7 @@
 :root {
 --color-base-400: #170C17;
 --color-base-300: #361B35;
+--color-base-250: #422841;
 --color-base-200: #664764;
 --color-base-150: #9F8D9E;
 --color-base-100: #FFF6FF;
@@ -33,3 +34,14 @@ button{
 }
 
 
+.dark{
+  background-color: var(--color-background-light);
+
+  color: var(--color-base-300)
+}
+
+.light{
+  background-color: var(--color-background-dark);
+
+  color: var(--color-base-100)
+}

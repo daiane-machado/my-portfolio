@@ -25,7 +25,7 @@ export default function Navbar() {
 
     if ((active === "active") && (positionScroll !== this.scroll)) {
 
-      setCheckActive(!checkActive)
+      setCheckActive(false)
     } 
 
   }, true)
@@ -52,7 +52,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className={styles.itemMenu}>
-          <Link href="/" className={styles.menu}>
+          <Link href="/projetos" className={styles.menu}>
             Projetos
           </Link>
         </li>

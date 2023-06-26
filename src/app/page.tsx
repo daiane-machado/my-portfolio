@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './page.module.scss'
 import { useGlobalContext } from '@/provider'
 import Navbar from '@/component/navbar'
+import Footer from '@/component/footer'
 
 export default function Home() {
 
@@ -41,11 +42,11 @@ export default function Home() {
           <p>Sou uma desenvolvedora front-end, altamente motivada,
             determinada e apaixonada por programação e tecnologia.
             <br></br>
-            Além disso, sou autodidata e estou sempre disposto a enfrentar novos desafios.
+            Além disso, sou autodidata e estou sempre disposta a enfrentar novos desafios.
             Amo criar websites e aplicações web</p>
         </div>
       </div>
-
+    <Footer />
     </main>
     </div>
   )
