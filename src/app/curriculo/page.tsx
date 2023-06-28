@@ -9,8 +9,6 @@ import { useGlobalContext } from '@/provider'
 import Skills from "@/component/skills"
 import Course from "@/component/course"
 
-import { courses } from "@/utils/datasCourses"
-
 export default function curriculo() {
 
   const title = "Curriculo"
@@ -18,10 +16,9 @@ export default function curriculo() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { theme } = useGlobalContext()
 
-  let sortedDate = curriculum.sort((d1, d2) =>
+  curriculum.sort((d1, d2) =>
     (d1.dateI < d2.dateI ? 1 : (d1.dateI > d2.dateI) ? -1 : 0));
-  console.log(sortedDate);
-
+ 
   return (
     <div className={`${styles.wrapper} ${styles[theme]}`}>
       <header>
