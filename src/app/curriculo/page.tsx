@@ -55,7 +55,7 @@ export default function curriculo() {
           </div>
         </div>
         <Skills theme={theme} />
-        <Course theme={theme} />
+        <Course theme={theme}  />
         
       </div>
       <footer>

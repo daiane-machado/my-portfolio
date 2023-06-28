@@ -3,8 +3,8 @@ import Image from "next/image"
 import { courses } from "@/utils/datasCourses"
 
 
-export default function Course(props: { theme: any }) {
-  console.log(courses)
+export default function Course(props: { theme: any}) {
+  
   return (
     <div className={styles.wrapper}>
       <span className={`${styles.name} ${styles.theme}`}>
