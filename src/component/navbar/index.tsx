@@ -18,23 +18,17 @@ export default function Navbar() {
     checkActive ? setActive("active") : setActive("")
     
     
-  }, [checkActive, positionScroll])
+    window.addEventListener('scroll', function (e: any) {
+      //if (e.scrollY === lastScrollTop) return;
+  
+      if ((active === "active") && (positionScroll !== this.scroll)) {
+  
+        setCheckActive(false)
+      } 
+  
+    }, true)
+  }, [checkActive, positionScroll, active])
 
-  window.addEventListener('scroll', function (e: any) {
-    //if (e.scrollY === lastScrollTop) return;
-
-    if ((active === "active") && (positionScroll !== this.scroll)) {
-
-      setCheckActive(false)
-    } 
-
-  }, true)
-
-
-
-
-
-  console.log(active)
 
   return (
     <div className={`${styles.wrapper} ${styles[theme]}`}>
