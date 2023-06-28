@@ -4,7 +4,7 @@ import { courses } from "@/utils/datasCourses"
 
 
 export default function Course(props: { theme: any}) {
-  
+
   return (
     <div className={styles.wrapper}>
       <span className={`${styles.name} ${styles.theme}`}>
@@ -46,7 +46,7 @@ export default function Course(props: { theme: any}) {
           <ul>
             {courses.map((course: any) => (
               <li className={styles.course} key={course.course}>
-                <a style={{cursor: "pointer"}} href={course.link} target="_blank">
+                <a style={{cursor: "pointer"}} href={course.link !== "" ? course.link :null} target="_blank">
                 <span><b>{course.name}</b></span><br></br>
                 <span>{`${course.time} | ${course.company}`}</span>
                 </a>

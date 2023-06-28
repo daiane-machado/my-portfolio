@@ -22,7 +22,7 @@ export default function Academic(props: { content : IAcademic} ) {
         <div className={styles.content}>
           <p className={styles.date}>{date}</p>
           <p className={styles.institution}>{data.institution}</p>
-          <p className={styles.course}>curso</p>
+          <p className={styles.course}>{data.course}</p>
         </div>
       </div>
         <div className={styles.colEmpty}></div>
