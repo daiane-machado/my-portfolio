@@ -1,9 +1,6 @@
-'use client'
-import Navbar from '@/component/navbar'
 import './globals.scss'
 import { Inter } from 'next/font/google'
 import { GlobalContextProvider } from '@/provider/context'
-import Footer from '@/component/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
