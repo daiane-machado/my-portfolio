@@ -45,7 +45,7 @@ export default function Course(props: { theme: any}) {
             className={styles.graphicsBR} />
           <ul>
             {courses.map((course: any) => (
-              <li className={styles.course} key={course.course}>
+              <li className={styles.course} key={course.name}>
                 <a style={{cursor: "pointer"}} href={course.link !== "" ? course.link :null} target="_blank">
                 <span><b>{course.name}</b></span><br></br>
                 <span>{`${course.time} | ${course.company}`}</span>

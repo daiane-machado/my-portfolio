@@ -39,10 +39,10 @@ export default function curriculo() {
           </div>
           <div className={styles.wrapperContent}>
             <div className={styles.content}>
-              {curriculum.map((item: any, key: any) =>
+              {curriculum.map((item: any) =>
              
               (
-                <div className={styles.item} key={key.year}>
+                <div className={styles.item} key={item.dateI}>
                   {item.institution ? <Academic content={item} /> : null}
                   {item.company ? <Experience content={item} /> : null}
                 </div>

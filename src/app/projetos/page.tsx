@@ -21,8 +21,8 @@ export default function projetos() {
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.projects} >
           {projects.map((item: any) => (
-            <div className={styles.project} key={item}>
-              <div className={styles.col1}>
+            <div className={styles.project} key={item.title}>
+              <div className={styles.graphicCover}>
                 <Image
                   src={"/graphics-half.svg"}
                   width={230}
@@ -36,7 +36,7 @@ export default function projetos() {
                   alt="imagem do projeto"
                   className={styles.imgProject} />
               </div>
-              <div className={styles.col2}>
+              <div className={styles.content}>
                 <p className={styles.titlePoject}>{item.title}</p>
                 <p className={styles.technology}>{item.tecnology}</p>
                 <div className={styles.links}>
