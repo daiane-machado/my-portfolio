@@ -35,8 +35,8 @@ export default function Navbar() {
       <Link href="/" >
         {
           theme === "light"
-            ? <Image src="/my_logo-light.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
-            : <Image src="/my_logo.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
+            ? <Image src="/My_Logo-light.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
+            : <Image src="/My_Logo.svg" width={237} height={45.64} alt={"logotipo Daiane Machado"} className={styles.logo} />
         }
       </Link>
       <ul className={`${styles.menuNav} ${styles[active]}`}>
