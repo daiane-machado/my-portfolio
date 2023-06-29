@@ -51,8 +51,3 @@ export default function Home() {
     </div>
   )
 }
-
-/*Sou uma desenvolvedora front-end, altamente motivada, 
-determinada e apaixonada por programação e tecnologia.
-Sou autodidata e estou sempre disposto(a) a enfrentar novos desafios. 
-Amo criar e desenhar websites e aplicações web.*/
