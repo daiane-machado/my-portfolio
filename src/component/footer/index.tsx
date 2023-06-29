@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.contact}>
-      <Image src="/My_logo-light.svg" width={140.2} height={27} alt={"logotipo Daiane Machado"} />
+      <Image src="/My_Logo-light.svg" width={140.2} height={27} alt={"logotipo Daiane Machado"} />
         <p className={styles.email}>dai.mmachado@gmail.com</p>
       </div>
       <div className={styles.social}>
