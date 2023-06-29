@@ -14,16 +14,21 @@
 .images {
 
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   .profile {
+    position: absolute;
     border-radius: 50%;
-    padding: 0.2rem;
     background-color: #fff;
     border: solid 3px var(--color-base-200);
+    left: 3rem;
+    top: 3rem
   }
   
   .graphics {
-    z-index: 1;
+    z-index: 2;
     opacity: 0.1;
   }
 }
@@ -33,7 +38,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  left: -3rem;
+  margin-left: 2rem;
 
   .text {
     top: 7rem;

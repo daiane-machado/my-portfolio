@@ -22,7 +22,7 @@ export default function Home() {
           width="0"
           height="0"
           sizes="100vw"
-          style={{ width: '14rem', height: 'auto' }}
+          style={{ width: '17rem', height: 'auto' }}
           alt='mulher negra sorrindo'
           className={styles.profile}
         />

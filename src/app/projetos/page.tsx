@@ -29,12 +29,14 @@ export default function projetos() {
                   height={230}
                   alt="grafic"
                   className={styles.graphics} />
-                <Image
-                  src={item.cover}
-                  width={220}
-                  height={137.18}
-                  alt="imagem do projeto"
-                  className={styles.imgProject} />
+                <a href={item.linkView} style={{cursor: "pointer"}} target="_blank">
+                  <Image
+                    src={item.cover}
+                    width={220}
+                    height={137.18}
+                    alt="imagem do projeto"
+                    className={styles.imgProject} />
+                </a>
               </div>
               <div className={styles.content}>
                 <p className={styles.titlePoject}>{item.title}</p>
