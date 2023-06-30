@@ -4,6 +4,7 @@ import styles from './page.module.scss'
 import { useGlobalContext } from '@/provider'
 import Navbar from '@/component/navbar'
 import Footer from '@/component/footer'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
 
@@ -48,6 +49,7 @@ export default function Home() {
       </div>
     <Footer />
     </main>
+    <Analytics />
     </div>
   )
 }
