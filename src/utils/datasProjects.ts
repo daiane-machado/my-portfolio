@@ -8,6 +8,13 @@ interface IProjects {
 
 export const projects: Array<IProjects> = [
   {
+    cover: "/covers/criptograma.png",
+    title: "D2M Lab Criptograma",
+    tecnology: "Html . CSS . JavaScript",
+    linkView: "https://d2m-lab-criptograma.vercel.app/",
+    linkCode: "https://github.com/daiane-machado/d2mlab-criptograma"
+  },
+  {
     cover: "/covers/catequese-app.png",
     title: "Catequese App",
     tecnology: "NextJs . TypeScript . SCSS",
