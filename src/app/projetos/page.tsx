@@ -5,6 +5,7 @@ import Footer from "@/component/footer"
 import Image from "next/image"
 import { projects } from "../../utils/datasProjects"
 import { useGlobalContext } from "@/provider"
+import { Key } from "react"
 
 export default function projetos() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -30,6 +31,7 @@ export default function projetos() {
                   alt="grafic"
                   className={styles.graphics} />
                 <a href={item.linkView} style={{cursor: "pointer"}} target="_blank">
+                  {item.title === "D2M Lab Criptograma"  ? <span className={styles.construction}>Em construção</span> : null}
                   <Image
                     src={item.cover}
                     width={220}
